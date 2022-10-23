@@ -9,7 +9,7 @@ import "./Socks.sol";
 /// @dev One invariant of this contract is that users can, after a deposit, always either swap or withdraw, therefore their deposited tokens never get stuck.
 /// A few ways to represent that:
 /// - After a successful call to `deposit(from)` from user U, the next call from U to either `swapAfterDeposit(from, to)` or `withdraw()` cannot revert.
-/// - balanceOf[msg.sender][id] > 0 => socks.balanceOf[address(this)][Sock.Left] > 0 || socks.balanceOf[address(this)][Sock.Left]
+i// - balanceOf[msg.sender][id] > 0 => socks.balanceOf[address(this)][Sock.Left] > 0 || socks.balanceOf[address(this)][Sock.Right] > 0
 /// The property above must be true for the swap market itself, regardless of calls to `inflate`.
 contract SocksSwap is ERC1155TokenReceiver {
     Socks constant socks = Socks(0xdfcCFA821F0bFD9d90746021094FAf6C0f10AB63);
