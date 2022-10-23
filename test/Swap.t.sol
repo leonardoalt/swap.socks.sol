@@ -143,11 +143,11 @@ contract SocksSwapTest is Test, ERC1155TokenReceiver {
 
     /********** HELPERS ***********/
 
-    function left() internal pure returns (uint256) {
-        return uint256(Sock.Left);
+    function left() internal pure returns (uint) {
+        return uint(Sock.Left);
     }
 
-    function right() internal pure returns (uint256) {
-        return uint256(Sock.Right);
+    function right() internal pure returns (uint) {
+        return uint(Sock.Right);
     }
 }
