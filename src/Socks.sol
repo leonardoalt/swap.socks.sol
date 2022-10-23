@@ -37,4 +37,3 @@ interface Socks {
     function supportsInterface(bytes4 interfaceId) external view returns (bool);
     function uri(uint256 id) external pure returns (string memory);
 }
-
