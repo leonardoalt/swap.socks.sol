@@ -8,8 +8,8 @@ import "./Socks.sol";
 /// @title Swap contract for Solidity socks.
 /// @dev One invariant of this contract is that users can always either swap or withdraw, therefore their deposited tokens never get stuck.
 contract SocksSwap is ERC1155TokenReceiver {
-    Socks immutable socks = Socks(0xdfcCFA821F0bFD9d90746021094FAf6C0f10AB63);
-    uint constant BOOTSTRAP = 10;
+    Socks constant socks = Socks(0xdfcCFA821F0bFD9d90746021094FAf6C0f10AB63);
+    uint256 constant BOOTSTRAP = 10;
 
     mapping (address => uint[2]) balanceOf;
 
